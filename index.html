@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Devadharshni — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="particles-canvas"></canvas>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ─── NAVBAR ─── -->
+<nav>
+  <div class="logo">&lt;<span>Devadharshni</span>/&gt;</div>
+  <ul class="nav-links">
+    <li><a href="#home">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="home">
+  <div class="hero-left">
+    <div class="avatar-wrapper">
+      <div class="avatar-glow"></div>
+      <div class="avatar-ring"></div>
+      <div class="avatar-inner" id="avatarInner" onclick="document.getElementById('photoInput').click()" title="Click to upload your photo">
+        <img id="avatarPhoto" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:50%;">
+        <div id="avatarFallback">
+          <span class="avatar-initials">CD</span>
+          <div class="avatar-upload-hint">📷 Add Photo</div>
+        </div>
+      </div>
+      <input type="file" id="photoInput" accept="image/*" style="display:none;"
+        onchange="
+          const file = this.files[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = e => {
+            const img = document.getElementById('avatarPhoto');
+            img.src = e.target.result;
+            img.style.display = 'block';
+            document.getElementById('avatarFallback').style.display = 'none';
+          };
+          reader.readAsDataURL(file);
+        ">
+    </div>
+    <div class="hero-socials">
+      <a href="#" class="social-btn" title="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="#" class="social-btn" title="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-badge">✦ Welcome To My Portfolio</div>
+    <h1 class="hero-title">Hi, I'm <span class="name-gradient">DEVADHARSHNI</span></h1>
+    <div class="hero-role" id="typed-role"></div>
+    <p class="hero-desc">
+      A passionate <strong>electronics student</strong> driven by curiosity and a strong foundation in
+      <strong>system design</strong> and software tools. Seeking opportunities to solve real-world business
+      problems while continuously learning <strong>ERP &amp; digital technologies</strong>.
+    </p>
+    <div class="hero-cta">
+      <a href="assets/DEVADHARSHNI_RESUME.pdf" class="btn-primary" download>Download Resume</a>
+      <a href="#contact" class="btn-secondary">Contact Me →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SKILLS ─── -->
+<section id="skills">
+  <div class="section-header">
+    <span class="section-tag">// expertise</span>
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="skills-split">
+
+    <!-- LEFT: Technical Skills -->
+    <div class="skills-half">
+      <div class="skills-half-label tech-label"><span>⚡</span> Technical Skills</div>
+      <div class="tech-list">
+
+        <div class="tech-row">
+          <div class="tech-icon-wrap" style="background:rgba(240,100,50,0.12);border-color:rgba(240,100,50,0.3);">
+            <span style="color:#e34f26;font-weight:900;font-size:1.1rem;">&#9649;</span>
+          </div>
+          <div class="tech-info">
+            <div class="tech-name">HTML5</div>
+            <div class="tech-bar"><div class="tech-fill" style="width:85%;background:linear-gradient(90deg,#e34f26,#f0c040)"></div></div>
+          </div>
+          <span class="tech-pct">85%</span>
+        </div>
+
+        <div class="tech-row">
+          <div class="tech-icon-wrap" style="background:rgba(38,77,228,0.12);border-color:rgba(38,77,228,0.3);">
+            <span style="color:#264de4;font-weight:900;font-size:1.1rem;">&#9649;</span>
+          </div>
+          <div class="tech-info">
+            <div class="tech-name">CSS3</div>
+            <div class="tech-bar"><div class="tech-fill" style="width:80%;background:linear-gradient(90deg,#264de4,#9b59f5)"></div></div>
+          </div>
+          <span class="tech-pct">80%</span>
+        </div>
+
+        <div class="tech-row">
+          <div class="tech-icon-wrap" style="background:rgba(247,223,30,0.1);border-color:rgba(247,223,30,0.3);">
+            <span style="color:#f7df1e;font-weight:900;font-size:1rem;font-family:'JetBrains Mono',monospace;">JS</span>
+          </div>
+          <div class="tech-info">
+            <div class="tech-name">JavaScript</div>
+            <div class="tech-bar"><div class="tech-fill" style="width:70%;background:linear-gradient(90deg,#f7df1e,#f0c040)"></div></div>
+          </div>
+          <span class="tech-pct">70%</span>
+        </div>
+
+        <div class="tech-row">
+          <div class="tech-icon-wrap" style="background:rgba(180,125,255,0.12);border-color:rgba(180,125,255,0.3);">
+            <span style="color:#b47dff;font-weight:700;font-size:0.85rem;font-family:'JetBrains Mono',monospace;">C</span>
+          </div>
+          <div class="tech-info">
+            <div class="tech-name">C Programming</div>
+            <div class="tech-bar"><div class="tech-fill" style="width:80%;background:linear-gradient(90deg,#9b59f5,#b47dff)"></div></div>
+          </div>
+          <span class="tech-pct">80%</span>
+        </div>
+
+        <div class="tech-row">
+          <div class="tech-icon-wrap" style="background:rgba(240,80,80,0.1);border-color:rgba(240,80,80,0.3);">
+            <span style="color:#f05050;font-weight:700;font-size:0.8rem;font-family:'JetBrains Mono',monospace;">☕</span>
+          </div>
+          <div class="tech-info">
+            <div class="tech-name">Java</div>
+            <div class="tech-bar"><div class="tech-fill" style="width:65%;background:linear-gradient(90deg,#f05050,#f0c040)"></div></div>
+          </div>
+          <span class="tech-pct">65%</span>
+        </div>
+
+        <div class="tech-row">
+          <div class="tech-icon-wrap" style="background:rgba(0,180,140,0.1);border-color:rgba(0,180,140,0.3);">
+            <span style="color:#00b48c;font-weight:700;font-size:0.75rem;font-family:'JetBrains Mono',monospace;">SQL</span>
+          </div>
+          <div class="tech-info">
+            <div class="tech-name">SQL</div>
+            <div class="tech-bar"><div class="tech-fill" style="width:60%;background:linear-gradient(90deg,#00b48c,#6c2bd9)"></div></div>
+          </div>
+          <span class="tech-pct">60%</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- VERTICAL DIVIDER -->
+    <div class="skills-divider">
+      <div class="divider-line"></div>
+      <div class="divider-gem">✦</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- RIGHT: Soft Skills -->
+    <div class="skills-half">
+      <div class="skills-half-label soft-label"><span>🌟</span> Soft Skills</div>
+      <div class="soft-list">
+        <div class="soft-row">
+          <div class="soft-row-icon">🤝</div>
+          <div class="soft-row-info">
+            <div class="soft-row-name">Team Collaboration</div>
+            <div class="soft-row-desc">Working effectively across hardware &amp; software teams</div>
+          </div>
+        </div>
+        <div class="soft-row">
+          <div class="soft-row-icon">🎯</div>
+          <div class="soft-row-info">
+            <div class="soft-row-name">Leadership</div>
+            <div class="soft-row-desc">Led ideation &amp; circuit integration on Smart Vision project</div>
+          </div>
+        </div>
+        <div class="soft-row">
+          <div class="soft-row-icon">🔄</div>
+          <div class="soft-row-info">
+            <div class="soft-row-name">Adaptability</div>
+            <div class="soft-row-desc">Quick to pick up new tools, languages, and frameworks</div>
+          </div>
+        </div>
+        <div class="soft-row">
+          <div class="soft-row-icon">🧩</div>
+          <div class="soft-row-info">
+            <div class="soft-row-name">Problem Solving</div>
+            <div class="soft-row-desc">Breaking complex engineering challenges into clear solutions</div>
+          </div>
+        </div>
+        <div class="soft-row">
+          <div class="soft-row-icon">💬</div>
+          <div class="soft-row-info">
+            <div class="soft-row-name">Communication</div>
+            <div class="soft-row-desc">Articulating technical ideas clearly to any audience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── PROJECTS ─── -->
+<section id="projects">
+  <div class="section-header">
+    <span class="section-tag">// work</span>
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <div class="section-divider"></div>
+    <p style="color:var(--muted);font-size:0.85rem;margin-top:14px;">Click any project to view its abstract &amp; report</p>
+  </div>
+  <div class="projects-grid">
+
+    <div class="project-card" onclick="openModal('modal1')">
+      <div class="project-type-badge hardware">⚙️ Hardware</div>
+      <span class="project-emoji">🔭</span>
+      <div class="project-title">Smart Vision Anomaly Detection System</div>
+      <p class="project-desc">ESP32-CAM-based anomaly detection with real-time monitoring and instant SMS alerts to prevent mishaps.</p>
+      <span class="project-role">Led ideation &amp; circuit integration</span>
+      <div class="project-tags">
+        <span class="tag">ESP32-CAM</span><span class="tag">IoT</span><span class="tag">SMS API</span><span class="tag">C</span>
+      </div>
+      <div class="project-click-hint">Click to read abstract →</div>
+    </div>
+
+    <div class="project-card" onclick="openModal('modal2')">
+      <div class="project-type-badge software">💻 Software</div>
+      <span class="project-emoji">🏙️</span>
+      <div class="project-title">Civic Issue Reporting System</div>
+      <p class="project-desc">Real-time complaint submission platform with instant authority notification and tracking dashboard.</p>
+      <span class="project-role">Frontend interface development</span>
+      <div class="project-tags">
+        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+      </div>
+      <div class="project-click-hint">Click to read abstract →</div>
+    </div>
+
+    <div class="project-card" onclick="openModal('modal3')">
+      <div class="project-type-badge hardware">⚙️ Hardware</div>
+      <span class="project-emoji">🔑</span>
+      <div class="project-title">QR-Based Bike Ignition System</div>
+      <p class="project-desc">Secure keyless vehicle access system using QR-based mobile authentication to replace traditional keys.</p>
+      <span class="project-role">Circuit integration &amp; testing</span>
+      <div class="project-tags">
+        <span class="tag">QR Auth</span><span class="tag">ESP32</span><span class="tag">Circuit</span>
+      </div>
+      <div class="project-click-hint">Click to read abstract →</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── MODALS ─── -->
+<div class="modal-overlay" id="modal1" onclick="closeModal('modal1')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('modal1')">✕</button>
+    <div class="modal-type hardware">⚙️ Hardware Project</div>
+    <h2 class="modal-title">Smart Vision Anomaly Detection System</h2>
+    <div class="modal-meta">
+      <span>🗓 2024</span><span>👤 Led ideation &amp; circuit integration</span>
+      <span class="tag">ESP32-CAM</span><span class="tag">IoT</span><span class="tag">C</span>
+    </div>
+    <div class="modal-divider"></div>
+    <div class="modal-section"><h3>Abstract</h3><p>[Paste your abstract here — 3–5 sentences summarizing the problem, motivation, and solution.]</p></div>
+    <div class="modal-section"><h3>Problem Statement</h3><p>[What real-world problem does this solve? What gap motivated this project?]</p></div>
+    <div class="modal-section"><h3>Methodology</h3><p>[Hardware components, software stack, step-by-step system flow, and ESP32-CAM + SMS integration approach.]</p></div>
+    <div class="modal-section"><h3>Results &amp; Outcome</h3><p>[Detection accuracy, response time, testing outcomes, and measurable validations.]</p></div>
+    <div class="modal-section"><h3>Contribution</h3><p>[Circuit design decisions, components selected, integration challenges solved, and lessons learned.]</p></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal2" onclick="closeModal('modal2')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('modal2')">✕</button>
+    <div class="modal-type software">💻 Software Project</div>
+    <h2 class="modal-title">Civic Issue Reporting System</h2>
+    <div class="modal-meta">
+      <span>🗓 2026</span><span>👤 Frontend interface development</span>
+      <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+    </div>
+    <div class="modal-divider"></div>
+    <div class="modal-section"><h3>Abstract</h3><p>Developed a web platform for real-time reporting of civic issues with instant authority notification and tracking. The system improves transparency, communication, and faster issue resolution.</p></div>
+    <div class="modal-section"><h3>Problem Statement</h3><p>Manual complaint systems are slow and lack transparency. This project provides a digital platform for efficient reporting and tracking. It enhances accountability and response time.</p></div>
+    <div class="modal-section"><h3>Features &amp; Functionality</h3><p>Built the frontend using HTML, CSS, and JavaScript for complaint submission. Integrated real-time notification and a dashboard for tracking and management.</p></div>
+    <div class="modal-section"><h3>Results &amp; Outcome</h3><p>Reduced complaint processing time and improved communication. Testing showed faster response and better user engagement.</p></div>
+    <div class="modal-section"><h3>Contribution</h3><p>Developed the frontend, designed the dashboard, and implemented real-time workflow. Focused on usability, testing, and performance.</p></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal3" onclick="closeModal('modal3')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('modal3')">✕</button>
+    <div class="modal-type hardware">⚙️ Hardware & Software</div>
+    <h2 class="modal-title">QR-Based Bike Ignition System</h2>
+    <div class="modal-meta">
+      <span>🗓 2026</span><span>👤 Circuit integration &amp; testing</span>
+      <span class="tag">QR Auth</span><span class="tag">ESP32</span><span class="tag">Circuit</span>
+    </div>
+    <div class="modal-divider"></div>
+    <div class="modal-section"><h3>Abstract</h3><p>Developed a secure keyless bike ignition system integrating hardware and software using QR authentication and OTP verification through a mobile app or web platform. The system enhances vehicle security and supports modern connected automotive solutions.</p></div>
+    <div class="modal-section"><h3>Problem Statement</h3><p>Traditional ignition systems are vulnerable to theft and duplication. This project addresses these issues by enabling secure digital authentication. It improves safety, convenience, and unauthorized access prevention.</p></div>
+    <div class="modal-section"><h3>System Architecture</h3><p>Used ESP32 for secure communication and ignition control. The QR code redirects users to a mobile or web login page, followed by OTP verification. After authentication, the ignition circuit is activated.</p></div>
+    <div class="modal-section"><h3>Results &amp; Outcome</h3><p>Achieved secure and fast authentication with reliable hardware–software integration. It ensures user convenience and reliablity.</p></div>
+    <div class="modal-section"><h3>Your Contribution</h3><p>Circuit work performed, components wired and tested, debugging challenges, and embedded systems lessons.]</p></div>
+  </div>
+</div>
+
+<!-- ─── EDUCATION ─── -->
+<section id="education">
+  <div class="section-header">
+    <span class="section-tag">// background</span>
+    <h2 class="section-title">My <span>Education</span></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="edu-timeline">
+
+    <div class="edu-item">
+      <div class="edu-left"><div class="edu-dot"></div><div class="edu-line"></div></div>
+      <div class="edu-card">
+        <div class="edu-degree">B.E. Electrical Engineering</div>
+        <div class="edu-school">Knowledge Institute of Technology, Salem</div>
+        <div class="edu-year">⟶ Sep 2023 — May 2027</div>
+        <div class="edu-score">CGPA: 8.21</div>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-left"><div class="edu-dot"></div><div class="edu-line"></div></div>
+      <div class="edu-card">
+        <div class="edu-degree">Senior Secondary </div>
+        <div class="edu-school">Mount Mary Matric Higher Secondary School, Salem</div>
+        <div class="edu-year">⟶ June 2022 — May 2023</div>
+        <div class="edu-score">Percentage: 83.33%</div>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-left">
+        <div class="edu-dot" style="background:linear-gradient(135deg,var(--gold),#f05050);box-shadow:0 0 12px rgba(240,192,64,0.5);"></div>
+        <div class="edu-line"></div>
+      </div>
+      <div class="edu-card" style="border-color:rgba(240,192,64,0.2);">
+        <div style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;color:var(--gold);letter-spacing:0.08em;margin-bottom:8px;">🏢 INTERNSHIP</div>
+        <div class="edu-degree">Intern — Hocus Pocus VFX Pvt. Ltd.</div>
+        <div class="edu-school">Chennai, Tamil Nadu</div>
+        <div class="edu-year">⟶ February 2026 · 10 Days</div>
+        <div class="edu-score" style="color:var(--gold-light);">Digital production workflows · Project coordination · Client requirements</div>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-left"><div class="edu-dot"></div></div>
+      <div class="edu-card">
+        <div class="edu-degree">Higher School</div>
+        <div class="edu-school">Mount Mary Matric Higher Secondary School, Salem</div>
+        <div class="edu-year">⟶ 2020 — 2021</div>
+        <div class="edu-score">Percentage: NIL</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="section-header">
+    <span class="section-tag">// reach out</span>
+    <h2 class="section-title">Contact <span>Me</span></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <h3>Let's Connect</h3>
+      <p>Open to internships, collaborations, and exciting engineering challenges. Don't hesitate to reach out!</p>
+      <div class="contact-detail"><div class="contact-icon">📞</div><span>+91 6374313231</span></div>
+      <div class="contact-detail"><div class="contact-icon">✉️</div><a href="mailto:devadharshni33@gmail.com">devadharshni33@gmail.com</a></div>
+      <div class="contact-detail"><div class="contact-icon">📍</div><span>Salem, India</span></div>
+    </div>
+    <form class="contact-form" onsubmit="return false">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="e.g. Arjun Kumar">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="you@email.com">
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Tell me about your opportunity or idea..."></textarea>
+      </div>
+      <button type="submit" class="btn-send">Send Message ✦</button>
+    </form>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-logo">&lt;<span>Devadharshni</span>/&gt;</div>
+  <div class="footer-copy">© 2026 C Devadharshni. Crafted with 💜</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
