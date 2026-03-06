@@ -11,8 +11,6 @@ This repository contains the source code for my personal portfolio website showc
 
 ## 🛠 Technologies Used
 - HTML, CSS, JavaScript
-- Embedded Systems
-- ESP32, IoT
 
 ## 📌 Projects Highlighted
 - QR-Based Bike Ignition System
