@@ -713,19 +713,157 @@ footer {
 ::-webkit-scrollbar-track { background: var(--black); }
 ::-webkit-scrollbar-thumb { background: var(--violet); border-radius: 2px; }
 
-// MOBILE RESPONSIVENESS  
-@media (max-width: 480px) {
-  .hero-title { font-size: 1.7rem; }
-  .avatar-wrapper { width: 170px; height: 170px; }
-  .avatar-initials { font-size: 3rem; }
-  .btn-primary, .btn-secondary { padding: 10px 22px; font-size: 0.85rem; }
-  .tech-row { padding: 10px 12px; }
-  .soft-row { padding: 10px 12px; }
-  .project-card { padding: 24px 18px; }
-  .edu-card { padding: 18px 20px; }
-  .contact-wrap { padding: 20px 16px; }
-  .nav-links a { font-size: 0.72rem; padding: 4px 10px; }
+/* ═══════════════════════════════════════════════
+   MOBILE RESPONSIVE — Media Queries
+═══════════════════════════════════════════════ */
+
+/* ─── TABLET (max 1024px) ─── */
+@media (max-width: 1024px) {
+  nav { padding: 16px 32px !important; }
+  #home { padding: 100px 32px 60px !important; gap: 40px !important; }
+  .hero-left { flex: 0 0 260px !important; }
+  .avatar-wrapper { width: 220px !important; height: 220px !important; }
+  #skills { padding: 80px 32px !important; }
+  .skills-half { padding: 0 24px !important; }
+  #projects { padding: 80px 32px !important; }
+  #education { padding: 80px 32px !important; }
+  #contact { padding: 80px 32px !important; }
+  .contact-wrap { padding: 36px !important; gap: 32px !important; }
 }
 
+/* ─── MOBILE (max 768px) ─── */
+@media (max-width: 768px) {
 
+  /* Hide custom cursor on touch */
+  .cursor, .cursor-ring { display: none !important; }
+  body { cursor: auto !important; }
 
+  /* Navbar */
+  nav {
+    padding: 14px 20px !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .nav-links {
+    gap: 4px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  .nav-links a { font-size: 0.75rem !important; padding: 5px 10px !important; }
+
+  /* Hero — stack vertically and center */
+  #home {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 130px 20px 60px !important;
+    gap: 32px !important;
+    min-height: auto !important;
+  }
+  .hero-left {
+    flex: none !important;
+    width: 100% !important;
+    align-items: center !important;
+  }
+  .hero-right {
+    flex: none !important;
+    width: 100% !important;
+  }
+  .avatar-wrapper {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto !important;
+  }
+  .avatar-initials { font-size: 3.2rem !important; }
+  .hero-title { font-size: 1.9rem !important; }
+  .hero-desc { font-size: 0.9rem !important; max-width: 100% !important; }
+  .hero-cta { justify-content: center !important; }
+  .hero-socials { justify-content: center !important; }
+  .hero-badge { font-size: 0.72rem !important; }
+  .name-gradient { display: block !important; }
+
+  /* Section headers */
+  .section-header { margin-bottom: 36px !important; }
+
+  /* Skills — stack vertically */
+  #skills { padding: 70px 20px !important; }
+  .skills-split {
+    flex-direction: column !important;
+    gap: 36px !important;
+    width: 100% !important;
+  }
+  .skills-half { padding: 0 !important; width: 100% !important; }
+  .skills-divider {
+    flex-direction: row !important;
+    height: auto !important;
+    width: 100% !important;
+    align-self: auto !important;
+    padding: 0 !important;
+  }
+  .divider-line {
+    flex: 1 !important;
+    height: 1px !important;
+    width: auto !important;
+    background: linear-gradient(90deg, transparent, rgba(108,43,217,0.5), rgba(240,192,64,0.4), transparent) !important;
+  }
+  .divider-gem { padding: 0 12px !important; }
+
+  /* Projects */
+  #projects { padding: 70px 20px !important; width: 100% !important; }
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+  .project-card { width: 100% !important; }
+
+  /* Education */
+  #education { padding: 70px 20px !important; }
+
+  /* Contact — stack vertically */
+  #contact { padding: 70px 20px !important; }
+  .contact-wrap {
+    grid-template-columns: 1fr !important;
+    padding: 24px 18px !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+
+  /* Modal */
+  .modal-box {
+    padding: 24px 18px !important;
+    border-radius: 16px !important;
+    max-height: 90vh !important;
+  }
+  .modal-title { font-size: 1.2rem !important; }
+  .modal-meta { flex-direction: column !important; gap: 6px !important; }
+
+  /* Footer */
+  footer {
+    flex-direction: column !important;
+    gap: 8px !important;
+    text-align: center !important;
+    padding: 24px 20px !important;
+  }
+}
+
+/* ─── SMALL MOBILE (max 480px) ─── */
+@media (max-width: 480px) {
+  #home { padding: 120px 16px 50px !important; }
+  .hero-title { font-size: 1.6rem !important; }
+  .avatar-wrapper { width: 170px !important; height: 170px !important; }
+  .avatar-initials { font-size: 2.8rem !important; }
+  .btn-primary, .btn-secondary { padding: 10px 20px !important; font-size: 0.82rem !important; }
+  .hero-desc { font-size: 0.85rem !important; }
+  .tech-row { padding: 10px 10px !important; gap: 10px !important; }
+  .soft-row { padding: 10px 10px !important; gap: 12px !important; }
+  .project-card { padding: 20px 16px !important; }
+  .edu-card { padding: 16px 18px !important; }
+  .contact-wrap { padding: 18px 14px !important; }
+  .nav-links { gap: 3px !important; }
+  .nav-links a { font-size: 0.7rem !important; padding: 4px 8px !important; }
+  .section-title { font-size: 1.6rem !important; }
+  .skills-half-label { font-size: 0.7rem !important; }
+  .tech-name { font-size: 0.82rem !important; }
+  .soft-row-name { font-size: 0.85rem !important; }
+  .soft-row-desc { font-size: 0.74rem !important; }
+}
