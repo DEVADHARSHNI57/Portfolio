@@ -34,29 +34,17 @@
       <div class="avatar-inner" id="avatarInner" onclick="document.getElementById('photoInput').click()" title="Click to upload your photo">
         <img id="avatarPhoto" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:50%;">
         <div id="avatarFallback">
-          <span class="avatar-initials">CD</span>
-          <div class="avatar-upload-hint">📷 Add Photo</div>
+          <span class="avatar-initials">DD</span>
+    
         </div>
       </div>
-      <input type="file" id="photoInput" accept="image/*" style="display:none;"
-        onchange="
-          const file = this.files[0];
-          if (!file) return;
-          const reader = new FileReader();
-          reader.onload = e => {
-            const img = document.getElementById('avatarPhoto');
-            img.src = e.target.result;
-            img.style.display = 'block';
-            document.getElementById('avatarFallback').style.display = 'none';
-          };
-          reader.readAsDataURL(file);
-        ">
+
     </div>
     <div class="hero-socials">
-      <a href="#" class="social-btn" title="LinkedIn">
+      <a href="https://www.linkedin.com/in/devadharshni-c" target="_blank">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
       </a>
-      <a href="#" class="social-btn" title="GitHub">
+      <a href="https://github.com/DEVADHARSHNI57" target="_blank">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
       </a>
     </div>
@@ -225,13 +213,13 @@
   <div class="projects-grid">
 
     <div class="project-card" onclick="openModal('modal1')">
-      <div class="project-type-badge hardware">⚙️ Hardware</div>
+      <div class="project-type-badge hardware">⚙️ Software </div>
       <span class="project-emoji">🔭</span>
-      <div class="project-title">Smart Vision Anomaly Detection System</div>
-      <p class="project-desc">ESP32-CAM-based anomaly detection with real-time monitoring and instant SMS alerts to prevent mishaps.</p>
-      <span class="project-role">Led ideation &amp; circuit integration</span>
+      <div class="project-title">Portfolio Website</div>
+      <p class="project-desc">A personal portfolio website built from scratch using HTML5, CSS3, and vanilla JavaScript — featuring a cosmic purple aesthetic, interactive animations, and a live contact form.</p>
+      <span class="project-role">Design &amp; Development</span>
       <div class="project-tags">
-        <span class="tag">ESP32-CAM</span><span class="tag">IoT</span><span class="tag">SMS API</span><span class="tag">C</span>
+        <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">GitHub Pages</span><span class="tag">Formspree</span>
       </div>
       <div class="project-click-hint">Click to read abstract →</div>
     </div>
@@ -249,7 +237,7 @@
     </div>
 
     <div class="project-card" onclick="openModal('modal3')">
-      <div class="project-type-badge hardware">⚙️ Hardware</div>
+      <div class="project-type-badge hardware">⚙️ Hardware &amp; testing</div>
       <span class="project-emoji">🔑</span>
       <div class="project-title">QR-Based Bike Ignition System</div>
       <p class="project-desc">Secure keyless vehicle access system using QR-based mobile authentication to replace traditional keys.</p>
@@ -267,18 +255,19 @@
 <div class="modal-overlay" id="modal1" onclick="closeModal('modal1')">
   <div class="modal-box" onclick="event.stopPropagation()">
     <button class="modal-close" onclick="closeModal('modal1')">✕</button>
-    <div class="modal-type hardware">⚙️ Hardware Project</div>
-    <h2 class="modal-title">Smart Vision Anomaly Detection System</h2>
+    <div class="modal-type software">💻 Software Project</div>
+    <h2 class="modal-title">Portfolio Website</h2>
     <div class="modal-meta">
-      <span>🗓 2024</span><span>👤 Led ideation &amp; circuit integration</span>
-      <span class="tag">ESP32-CAM</span><span class="tag">IoT</span><span class="tag">C</span>
+      <span>🗓 2025</span><span>👤 Design &amp; Development</span>
+      <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">GitHub Pages</span><span class="tag">Formspree</span>
     </div>
     <div class="modal-divider"></div>
-    <div class="modal-section"><h3>Abstract</h3><p>[Paste your abstract here — 3–5 sentences summarizing the problem, motivation, and solution.]</p></div>
-    <div class="modal-section"><h3>Problem Statement</h3><p>[What real-world problem does this solve? What gap motivated this project?]</p></div>
-    <div class="modal-section"><h3>Methodology</h3><p>[Hardware components, software stack, step-by-step system flow, and ESP32-CAM + SMS integration approach.]</p></div>
-    <div class="modal-section"><h3>Results &amp; Outcome</h3><p>[Detection accuracy, response time, testing outcomes, and measurable validations.]</p></div>
-    <div class="modal-section"><h3>Contribution</h3><p>[Circuit design decisions, components selected, integration challenges solved, and lessons learned.]</p></div>
+    <div class="modal-section"><h3>Abstract</h3><p>This portfolio is a fully responsive, single-page web application built from scratch using HTML5, CSS3, and vanilla JavaScript. Designed with a cosmic purple aesthetic, it showcases my skills, projects, and contact information in an engaging and interactive format. The site features animated particle backgrounds, a custom cursor, typewriter effects, and a Formspree-integrated contact form — all crafted without any external frameworks or libraries.</p></div>
+    <div class="modal-section"><h3>Problem Statement</h3><p>As an Electrical Engineering student, I needed a professional online presence that goes beyond a static résumé — something that demonstrates not just what I know, but how I build. Existing portfolio templates felt generic and failed to reflect my personal style or technical depth. The challenge was to design and develop a unique, visually distinctive portfolio from the ground up, while ensuring it remained functional, accessible, and mobile-friendly across all devices.</p></div>
+    <div class="modal-section"><h3>Methodology</h3><p>The portfolio was built as a three-file project — index.html, style.css, and script.js — using only vanilla HTML, CSS, and JavaScript. A cosmic purple theme was established through CSS custom properties, while interactive features like particle animations, a custom cursor, and a typewriter effect were implemented in plain JS. The contact form was integrated with Formspree, ensuring all inputs carry the required name attributes for successful POST submissions. Responsive design is handled via media queries at three breakpoints (1024px, 768px, 480px).
+</p></div>
+    <div class="modal-section"><h3>Results &amp; Outcome</h3><p>The final portfolio is live and publicly accessible via GitHub Pages at devadharshni57.github.io/Portfolio. All interactive features — particles, custom cursor, and typewriter effect — render correctly across modern browsers. The contact form successfully routes submissions to the designated email address. The layout adapts fluidly across desktop, tablet, and mobile screen sizes, delivering a consistent user experience. The project served as a hands-on exercise in debugging JavaScript scope errors, CSS specificity conflicts, and third-party form integration — strengthening both technical and problem-solving skills.</p></div>
+    <!-- <div class="modal-section"><h3>Contribution</h3><p>[Circuit design decisions, components selected, integration challenges solved, and lessons learned.]</p></div> -->
   </div>
 </div>
 
@@ -296,7 +285,7 @@
     <div class="modal-section"><h3>Problem Statement</h3><p>Manual complaint systems are slow and lack transparency. This project provides a digital platform for efficient reporting and tracking. It enhances accountability and response time.</p></div>
     <div class="modal-section"><h3>Features &amp; Functionality</h3><p>Built the frontend using HTML, CSS, and JavaScript for complaint submission. Integrated real-time notification and a dashboard for tracking and management.</p></div>
     <div class="modal-section"><h3>Results &amp; Outcome</h3><p>Reduced complaint processing time and improved communication. Testing showed faster response and better user engagement.</p></div>
-    <div class="modal-section"><h3>Contribution</h3><p>Developed the frontend, designed the dashboard, and implemented real-time workflow. Focused on usability, testing, and performance.</p></div>
+    <!-- <div class="modal-section"><h3>Contribution</h3><p>Developed the frontend, designed the dashboard, and implemented real-time workflow. Focused on usability, testing, and performance.</p></div> -->
   </div>
 </div>
 
