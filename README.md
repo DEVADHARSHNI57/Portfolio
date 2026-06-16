@@ -1,21 +1,38 @@
-# 🌐 Personal Portfolio
+# Personal Portfolio Website
 
-This repository contains the source code for my personal portfolio website showcasing my projects, skills, and experience in Embedded Systems, Automotive Electronics, and IoT.
+A professional portfolio website designed to showcase my technical skills, projects, education, and career interests as an Electrical Engineering undergraduate and aspiring Full Stack Developer.
 
-## 🚀 Features
-- Project showcase
-- Resume download
-- Technical skills
+## Overview
+
+This portfolio serves as a digital representation of my academic journey, technical expertise, and hands-on project experience. It highlights my work in web development, backend technologies, and problem-solving through real-world applications.
+
+## Features
+
+- Responsive and user-friendly design
+- Professional profile and career summary
+- Technical skills showcase
+- Project portfolio
+- Education and experience details
 - Contact information
-- Responsive design
 
-## 🛠 Technologies Used
-- HTML, CSS, JavaScript
+## Technologies Used
 
-## 📌 Projects Highlighted
-- QR-Based Bike Ignition System
-- Smart Vision Anomaly Detection
-- Civic Issue Reporting System
+- HTML5
+- CSS3
+- JavaScript
 
-## 🎯 Career Goal
-Aspiring Electrical and Systems Engineer with strong interest in ERP, system integration, and digital technologies. Passionate about solving real-world problems by combining technical, analytical, and business process knowledge. Seeking opportunities to contribute to innovative and technology-driven organizations.
+## Live Demo
+
+🔗 [Add your portfolio link here](https://devadharshni57.github.io/Portfolio/)
+
+## Author
+
+**Devadharshni C**
+
+Electrical Engineering Undergraduate | Aspiring Full Stack Developer
+
+GitHub: https://github.com/DEVADHARSHNI57
+
+---
+
+*Building innovative solutions through continuous learning and practical application of technology.*
