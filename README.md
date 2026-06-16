@@ -23,7 +23,7 @@ This portfolio serves as a digital representation of my academic journey, techni
 
 ## Live Demo
 
-🔗 (https://devadharshni57.github.io/Portfolio/)
+🔗 https://devadharshni57.github.io/Portfolio/
 
 ## Author
 
