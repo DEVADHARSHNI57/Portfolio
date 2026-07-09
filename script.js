@@ -128,11 +128,7 @@ document.addEventListener('keydown', e => {
 
 // ─── TYPEWRITER ───
 const roles = [
-  'Innovative Engineering Student.',
-  'Electronics Enthusiast.',
-  'Frontend Developer.',
-  'ERP & Digital Learner.',
-  'IoT Builder.'
+  'Electrical & Electronics Engineering Student | Embedded Systems & Full-Stack Developer'
 ];
 let ri = 0, ci = 0, deleting = false;
 const typed = document.getElementById('typed-role');
